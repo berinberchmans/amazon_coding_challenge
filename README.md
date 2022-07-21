@@ -5,12 +5,6 @@ Solving the Amazon self driving car delivery challenge using Markov Decision Pro
 
 ### Berin Berchmans
 
-MSc Computer Science Student 2021-22
-
-University of Lincoln
-
-✉️ e-mail : berin99.berchmans@gmail.com
-
 ### 1️⃣ Phase 1
 
 To create a pathfinding algorithms for Amazon’s self-driving delivery vehicles,  I propose a solution to find the 2D path between the starting point and delivery point by framing the problem as a **MDP or Markov Decision Process**. In MDP, an agent is supposed to decide the best action to select based on his current state. This step is taken on each state the agent is in. An MDP has states, actions and rewards. The states here are the cells of the grid. The actions are the set of all possible actions the delivery car can take, here it is [UP, DOWN, LEFT, RIGHT, TOP-LEFT, TOP-RIGHT, BOTTOM-LEFT, BOTTOM-RIGHT] . The rewards are values that it gets for moving to a particular state. I created a 10x10 grid and then created the transition table and reward table for the problem. I assigned a reward value of 5 for the delivery point and -3 for the obstacles.  Using value-iteration we can get a set of values for each cell of the grid. These values can be used to map the ideal route the delivery car can take to reach the delivery point. 
